@@ -46,10 +46,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         fontWeight: FontWeight.w600,
                         color: Color(0xff7C7C7C),
                       ),
-                      trailing: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[FavoriteToggleIcon()],
-                      ),
+                      trailing: FavoriteToggleIcon(),
                     ),
                     Spacer(),
                     Row(

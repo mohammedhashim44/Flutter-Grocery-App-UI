@@ -19,6 +19,7 @@ class _FavoriteToggleIconState extends State<FavoriteToggleIcon> {
       child: Icon(
         favorite ? Icons.favorite : Icons.favorite_border,
         color: favorite ? Colors.red : Colors.blueGrey,
+        size: 30,
       ),
     );
   }
