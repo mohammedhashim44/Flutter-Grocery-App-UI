@@ -7,6 +7,8 @@ import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/models/grocery_item.dart';
 import 'package:grocery_app/widgets/item_counter_widget.dart';
 
+import 'favourite_toggle_icon_widget.dart';
+
 class ProductDetailsScreen extends StatefulWidget {
   final GroceryItem groceryItem;
 
@@ -185,29 +187,5 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   double getTotalPrice() {
     return amount * widget.groceryItem.price;
-  }
-}
-
-class FavoriteToggleIcon extends StatefulWidget {
-  @override
-  _FavoriteToggleIconState createState() => _FavoriteToggleIconState();
-}
-
-class _FavoriteToggleIconState extends State<FavoriteToggleIcon> {
-  bool favorite = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        setState(() {
-          favorite = !favorite;
-        });
-      },
-      child: Icon(
-        favorite ? Icons.favorite : Icons.favorite_border,
-        color: favorite ? Colors.red : Colors.blueGrey,
-      ),
-    );
   }
 }
