@@ -32,18 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            splashScreenIcon(),
-            SizedBox(
-              height: 20,
-            ),
-            CircularProgressIndicator(
-              valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
-            )
-          ],
-        ),
+        child: splashScreenIcon(),
       ),
     );
   }
