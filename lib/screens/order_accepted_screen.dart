@@ -52,7 +52,7 @@ class OrderAcceptedScreen extends StatelessWidget {
               flex: 2,
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
               child: Text(

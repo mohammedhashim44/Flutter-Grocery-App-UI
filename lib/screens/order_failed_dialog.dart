@@ -25,7 +25,7 @@ class OrderFailedDialogue extends StatelessWidget {
               child: Row(
                 children: [
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
                     },
                     child: Icon(
@@ -69,7 +69,7 @@ class OrderFailedDialogue extends StatelessWidget {
             AppButton(
               label: "Please Try Again",
               fontWeight: FontWeight.w600,
-              onPressed: (){
+              onPressed: () {
                 Navigator.of(context).pushReplacement(new MaterialPageRoute(
                   builder: (BuildContext context) {
                     return OrderAcceptedScreen();
@@ -81,7 +81,7 @@ class OrderFailedDialogue extends StatelessWidget {
               flex: 4,
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
               child: AppText(

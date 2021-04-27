@@ -9,7 +9,6 @@ import 'package:grocery_app/widgets/grocery_item_card_widget.dart';
 import 'filter_screen.dart';
 
 class CategoryItemsScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +18,7 @@ class CategoryItemsScreen extends StatelessWidget {
         centerTitle: true,
         automaticallyImplyLeading: false,
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Container(
@@ -76,7 +75,7 @@ class CategoryItemsScreen extends StatelessWidget {
           );
         }).toList(),
         staggeredTiles:
-        beverages.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
+            beverages.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
         mainAxisSpacing: 3.0,
         crossAxisSpacing: 0.0, // add some space
       ),

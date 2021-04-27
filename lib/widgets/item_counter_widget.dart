@@ -22,7 +22,9 @@ class _ItemCounterWidgetState extends State<ItemCounterWidget> {
         SizedBox(width: 18),
         Container(
             width: 30,
-            child: Center(child: getText(text: amount.toString(), fontSize: 18, isBold: true))),
+            child: Center(
+                child: getText(
+                    text: amount.toString(), fontSize: 18, isBold: true))),
         SizedBox(width: 18),
         iconWidget(Icons.add,
             iconColor: AppColors.primaryColor, onPressed: incrementAmount)
@@ -80,9 +82,9 @@ class _ItemCounterWidgetState extends State<ItemCounterWidget> {
 
   Widget getText(
       {String text,
-        double fontSize,
-        bool isBold = false,
-        color = Colors.black}) {
+      double fontSize,
+      bool isBold = false,
+      color = Colors.black}) {
     return Text(
       text,
       style: TextStyle(

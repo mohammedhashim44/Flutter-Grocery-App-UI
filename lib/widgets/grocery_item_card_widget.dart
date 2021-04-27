@@ -61,7 +61,6 @@ class GroceryItemCardWidget extends StatelessWidget {
                   text: "\$${item.price.toStringAsFixed(2)}",
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-
                 ),
                 Spacer(),
                 addWidget()

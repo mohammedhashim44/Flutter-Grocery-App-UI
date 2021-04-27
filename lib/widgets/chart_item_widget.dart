@@ -14,7 +14,6 @@ class ChartItemWidget extends StatefulWidget {
 }
 
 class _ChartItemWidgetState extends State<ChartItemWidget> {
-
   final double height = 110;
 
   final Color borderColor = Color(0xffE2E2E2);
@@ -39,7 +38,11 @@ class _ChartItemWidgetState extends State<ChartItemWidget> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppText(text: widget.item.name, fontSize: 16, fontWeight: FontWeight.bold,),
+                AppText(
+                  text: widget.item.name,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
                 SizedBox(
                   height: 5,
                 ),
@@ -68,7 +71,9 @@ class _ChartItemWidgetState extends State<ChartItemWidget> {
                   color: AppColors.darkGrey,
                   size: 25,
                 ),
-                Spacer(flex: 5,),
+                Spacer(
+                  flex: 5,
+                ),
                 Container(
                   width: 70,
                   child: AppText(
@@ -98,4 +103,3 @@ class _ChartItemWidgetState extends State<ChartItemWidget> {
     return widget.item.price * amount;
   }
 }
-

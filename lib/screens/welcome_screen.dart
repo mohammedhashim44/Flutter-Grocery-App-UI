@@ -85,18 +85,18 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 
-  Widget getButton(BuildContext context){
+  Widget getButton(BuildContext context) {
     return AppButton(
       label: "Get Started",
       fontWeight: FontWeight.w600,
       padding: EdgeInsets.symmetric(vertical: 25),
-      onPressed: (){
+      onPressed: () {
         onGetStartedClicked(context);
       },
     );
   }
 
-  void onGetStartedClicked(BuildContext context){
+  void onGetStartedClicked(BuildContext context) {
     Navigator.of(context).pushReplacement(new MaterialPageRoute(
       builder: (BuildContext context) {
         return DashboardScreen();

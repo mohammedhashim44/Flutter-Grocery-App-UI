@@ -15,8 +15,8 @@ class AppButton extends StatelessWidget {
     this.roundness = 18,
     this.fontWeight = FontWeight.bold,
     this.padding = const EdgeInsets.symmetric(vertical: 24),
-    this.trailingWidget, this.onPressed,
-
+    this.trailingWidget,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -45,16 +45,16 @@ class AppButton extends StatelessWidget {
                 ),
               ),
             ),
-            if(trailingWidget != null)
+            if (trailingWidget != null)
               Positioned(
                 top: 0,
                 right: 25,
-                child: trailingWidget,)
+                child: trailingWidget,
+              )
           ],
         ),
         onPressed: () {
-          if(onPressed != null)
-            onPressed();
+          if (onPressed != null) onPressed();
         },
       ),
     );

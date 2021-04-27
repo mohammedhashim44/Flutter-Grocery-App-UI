@@ -35,7 +35,6 @@ class CategoryItemCardWidget extends StatelessWidget {
             width: 120,
             child: imageWidget(),
           ),
-
           SizedBox(
             height: 60,
             child: Center(
@@ -54,7 +53,8 @@ class CategoryItemCardWidget extends StatelessWidget {
 
   Widget imageWidget() {
     return Container(
-      child: Image.asset(item.imagePath,
+      child: Image.asset(
+        item.imagePath,
         fit: BoxFit.contain,
       ),
     );

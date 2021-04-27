@@ -97,7 +97,7 @@ class _OptionItemState extends State<OptionItem> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         setState(() {
           checked = !checked;
         });

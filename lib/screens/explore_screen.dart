@@ -24,15 +24,15 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-          child: Column(
-            children: [
-              getHeader(),
-              Expanded(
-                child: getStaggeredGridView(context),
-              ),
-            ],
+      child: Column(
+        children: [
+          getHeader(),
+          Expanded(
+            child: getStaggeredGridView(context),
           ),
-        ));
+        ],
+      ),
+    ));
   }
 
   Widget getHeader() {

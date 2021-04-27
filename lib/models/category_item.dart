@@ -1,4 +1,3 @@
-
 class CategoryItem {
   final int id;
   final String name;
@@ -6,7 +5,6 @@ class CategoryItem {
 
   CategoryItem({this.id, this.name, this.imagePath});
 }
-
 
 var categoryItemsDemo = [
   CategoryItem(
@@ -33,6 +31,4 @@ var categoryItemsDemo = [
     name: "Beverages",
     imagePath: "assets/images/categories_images/beverages.png",
   ),
-
-
 ];
