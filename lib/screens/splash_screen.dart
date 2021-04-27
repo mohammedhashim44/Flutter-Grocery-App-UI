@@ -15,8 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    const fiveSec = const Duration(seconds: 5);
-    Future.delayed(fiveSec, () => onTimerFinished());
+    const delay = const Duration(seconds: 3);
+    Future.delayed(delay, () => onTimerFinished());
   }
 
   void onTimerFinished() {
