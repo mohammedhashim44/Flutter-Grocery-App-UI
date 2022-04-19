@@ -1,6 +1,8 @@
 
 Flutter Grocery App UI  
 -------------  
+### To try the app download the apk from the [Release Tab](https://github.com/mohammedhashim44/Flutter-Grocery-App-UI/releases/download/1.0.0/app-release.apk)  
+-------------
   
 #### Flutter Version Used : 1.22.4  
 #### Desing Credit : By  [Afsar Hossen](https://www.linkedin.com/in/afsar-shuvo/)  
