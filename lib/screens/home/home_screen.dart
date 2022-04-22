@@ -133,7 +133,10 @@ class HomeScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => ProductDetailsScreen(groceryItem,heroSuffix: "home_screen",)),
+          builder: (context) => ProductDetailsScreen(
+                groceryItem,
+                heroSuffix: "home_screen",
+              )),
     );
   }
 

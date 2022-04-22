@@ -117,7 +117,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             tileMode: TileMode.clamp),
       ),
       child: Hero(
-        tag: "GroceryItem:" + widget.groceryItem.name + "-" + (widget.heroSuffix ?? ""),
+        tag: "GroceryItem:" +
+            widget.groceryItem.name +
+            "-" +
+            (widget.heroSuffix ?? ""),
         child: Image(
           image: AssetImage(widget.groceryItem.imagePath),
         ),
