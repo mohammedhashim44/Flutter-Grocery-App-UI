@@ -116,6 +116,7 @@ class HomeScreen extends StatelessWidget {
             },
             child: GroceryItemCardWidget(
               item: items[index],
+              heroSuffix: "home_screen",
             ),
           );
         },
@@ -132,7 +133,10 @@ class HomeScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => ProductDetailsScreen(groceryItem)),
+          builder: (context) => ProductDetailsScreen(
+                groceryItem,
+                heroSuffix: "home_screen",
+              )),
     );
   }
 

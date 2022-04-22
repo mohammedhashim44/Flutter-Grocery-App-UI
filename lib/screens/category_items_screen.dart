@@ -70,6 +70,7 @@ class CategoryItemsScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: GroceryItemCardWidget(
                 item: groceryItem,
+                heroSuffix: "explore_screen",
               ),
             ),
           );
@@ -86,7 +87,11 @@ class CategoryItemsScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => ProductDetailsScreen(groceryItem)),
+        builder: (context) => ProductDetailsScreen(
+          groceryItem,
+          heroSuffix: "explore_screen",
+        ),
+      ),
     );
   }
 }
