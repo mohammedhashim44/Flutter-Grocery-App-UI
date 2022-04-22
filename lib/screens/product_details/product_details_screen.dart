@@ -11,8 +11,9 @@ import 'favourite_toggle_icon_widget.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final GroceryItem groceryItem;
+  final String heroSuffix;
 
-  const ProductDetailsScreen(this.groceryItem);
+  const ProductDetailsScreen(this.groceryItem, {this.heroSuffix});
 
   @override
   _ProductDetailsScreenState createState() => _ProductDetailsScreenState();
@@ -115,8 +116,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp),
       ),
-      child: Image(
-        image: AssetImage(widget.groceryItem.imagePath),
+      child: Hero(
+        tag: "GroceryItem:" + widget.groceryItem.name + "-" + (widget.heroSuffix ?? ""),
+        child: Image(
+          image: AssetImage(widget.groceryItem.imagePath),
+        ),
       ),
     );
   }
