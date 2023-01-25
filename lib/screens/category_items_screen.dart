@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/models/grocery_item.dart';
 import 'package:grocery_app/screens/product_details/product_details_screen.dart';
@@ -57,29 +55,30 @@ class CategoryItemsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: StaggeredGridView.count(
-        crossAxisCount: 4,
-        // I only need two card horizontally
-        children: beverages.asMap().entries.map<Widget>((e) {
-          GroceryItem groceryItem = e.value;
-          return GestureDetector(
-            onTap: () {
-              onItemClicked(context, groceryItem);
-            },
-            child: Container(
-              padding: EdgeInsets.all(10),
-              child: GroceryItemCardWidget(
-                item: groceryItem,
-                heroSuffix: "explore_screen",
-              ),
-            ),
-          );
-        }).toList(),
-        staggeredTiles:
-            beverages.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
-        mainAxisSpacing: 3.0,
-        crossAxisSpacing: 0.0, // add some space
-      ),
+      body: Container(),
+      // body: StaggeredGridView.count(
+      //   crossAxisCount: 4,
+      //   // I only need two card horizontally
+      //   children: beverages.asMap().entries.map<Widget>((e) {
+      //     GroceryItem groceryItem = e.value;
+      //     return GestureDetector(
+      //       onTap: () {
+      //         onItemClicked(context, groceryItem);
+      //       },
+      //       child: Container(
+      //         padding: EdgeInsets.all(10),
+      //         child: GroceryItemCardWidget(
+      //           item: groceryItem,
+      //           heroSuffix: "explore_screen",
+      //         ),
+      //       ),
+      //     );
+      //   }).toList(),
+      //   staggeredTiles:
+      //       beverages.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
+      //   mainAxisSpacing: 3.0,
+      //   crossAxisSpacing: 0.0, // add some space
+      // ),
     );
   }
 

@@ -3,7 +3,7 @@ import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/models/category_item.dart';
 
 class CategoryItemCardWidget extends StatelessWidget {
-  CategoryItemCardWidget({Key key, this.item, this.color = Colors.blue})
+  CategoryItemCardWidget({Key? key, required this.item, this.color = Colors.blue})
       : super(key: key);
   final CategoryItem item;
 

@@ -1,12 +1,17 @@
 class GroceryItem {
-  final int id;
+  final int? id;
   final String name;
   final String description;
   final double price;
   final String imagePath;
 
-  GroceryItem(
-      {this.id, this.name, this.description, this.price, this.imagePath});
+  GroceryItem({
+    this.id,
+    required this.name,
+    required this.description,
+    required this.price,
+    required this.imagePath,
+  });
 }
 
 var demoItems = [
