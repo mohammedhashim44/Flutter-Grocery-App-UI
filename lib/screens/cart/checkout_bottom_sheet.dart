@@ -46,7 +46,12 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
           getDivider(),
           checkoutRow("Delivery", trailingText: "Select Method"),
           getDivider(),
-          checkoutRow("Payment", trailingWidget: Icon(Icons.payment,),),
+          checkoutRow(
+            "Payment",
+            trailingWidget: Icon(
+              Icons.payment,
+            ),
+          ),
           getDivider(),
           checkoutRow("Promo Code", trailingText: "Pick Discount"),
           getDivider(),
