@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   //One instance, needs factory
-  static AppColors _instance;
+  static AppColors? _instance;
   factory AppColors() => _instance ??= AppColors._();
 
   AppColors._();

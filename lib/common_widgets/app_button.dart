@@ -6,12 +6,12 @@ class AppButton extends StatelessWidget {
   final double roundness;
   final FontWeight fontWeight;
   final EdgeInsets padding;
-  final Widget trailingWidget;
-  final Function onPressed;
+  final Widget? trailingWidget;
+  final Function? onPressed;
 
   const AppButton({
-    Key key,
-    this.label,
+    Key? key,
+    required this.label,
     this.roundness = 18,
     this.fontWeight = FontWeight.bold,
     this.padding = const EdgeInsets.symmetric(vertical: 24),
@@ -23,15 +23,25 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      child: RaisedButton(
-        visualDensity: VisualDensity.compact,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(roundness),
+      child: ElevatedButton(
+        onPressed: () {
+          onPressed?.call();
+        },
+        style: ElevatedButton.styleFrom(
+          visualDensity: VisualDensity.compact,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(roundness),
+          ),
+          elevation: 0,
+          backgroundColor: AppColors.primaryColor,
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontFamily: Theme.of(context).textTheme.bodyText1?.fontFamily,
+            fontWeight: fontWeight,
+          ),
+          padding: padding,
+          minimumSize: const Size.fromHeight(50),
         ),
-        color: AppColors.primaryColor,
-        textColor: Colors.white,
-        elevation: 0.0,
-        padding: padding,
         child: Stack(
           fit: StackFit.passthrough,
           children: <Widget>[
@@ -49,13 +59,10 @@ class AppButton extends StatelessWidget {
               Positioned(
                 top: 0,
                 right: 25,
-                child: trailingWidget,
-              )
+                child: trailingWidget!,
+              ),
           ],
         ),
-        onPressed: () {
-          if (onPressed != null) onPressed();
-        },
       ),
     );
   }

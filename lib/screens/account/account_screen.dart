@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
@@ -62,15 +61,20 @@ class AccountScreen extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       margin: EdgeInsets.symmetric(horizontal: 25),
-      child: RaisedButton(
-        visualDensity: VisualDensity.compact,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18.0),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          visualDensity: VisualDensity.compact,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+          ),
+          elevation: 0,
+          backgroundColor: Color(0xffF2F3F2),
+          textStyle: TextStyle(
+            color: Colors.white,
+          ),
+          padding: EdgeInsets.symmetric(vertical: 24, horizontal: 25),
+          minimumSize: const Size.fromHeight(50),
         ),
-        color: Color(0xffF2F3F2),
-        textColor: Colors.white,
-        elevation: 0.0,
-        padding: EdgeInsets.symmetric(vertical: 24, horizontal: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

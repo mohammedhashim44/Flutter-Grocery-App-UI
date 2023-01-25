@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/common_widgets/app_button.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
@@ -11,7 +8,7 @@ import 'favourite_toggle_icon_widget.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final GroceryItem groceryItem;
-  final String heroSuffix;
+  final String? heroSuffix;
 
   const ProductDetailsScreen(this.groceryItem, {this.heroSuffix});
 
@@ -128,7 +125,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  Widget getProductDataRowWidget(String label, {Widget customWidget}) {
+  Widget getProductDataRowWidget(String label, {Widget? customWidget}) {
     return Container(
       margin: EdgeInsets.only(
         top: 20,

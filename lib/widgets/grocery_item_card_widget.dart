@@ -4,10 +4,10 @@ import 'package:grocery_app/models/grocery_item.dart';
 import 'package:grocery_app/styles/colors.dart';
 
 class GroceryItemCardWidget extends StatelessWidget {
-  GroceryItemCardWidget({Key key, this.item, this.heroSuffix})
+  GroceryItemCardWidget({Key? key, required this.item, this.heroSuffix})
       : super(key: key);
   final GroceryItem item;
-  final String heroSuffix;
+  final String? heroSuffix;
 
   final double width = 174;
   final double height = 250;

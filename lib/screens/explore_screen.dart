@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/models/category_item.dart';
@@ -60,31 +59,31 @@ class ExploreScreen extends StatelessWidget {
   }
 
   Widget getStaggeredGridView(BuildContext context) {
-    return StaggeredGridView.count(
-      crossAxisCount: 4,
-      children: categoryItemsDemo.asMap().entries.map<Widget>((e) {
-        int index = e.key;
-        CategoryItem categoryItem = e.value;
-        return GestureDetector(
-          onTap: () {
-            onCategoryItemClicked(context, categoryItem);
-          },
-          child: Container(
-            padding: EdgeInsets.all(10),
-            child: CategoryItemCardWidget(
-              item: categoryItem,
-              color: gridColors[index % gridColors.length],
+    return SingleChildScrollView(
+      padding: EdgeInsets.symmetric(
+        vertical: 10,
+      ),
+      child: StaggeredGrid.count(
+        crossAxisCount: 2,
+        children: categoryItemsDemo.asMap().entries.map<Widget>((e) {
+          int index = e.key;
+          CategoryItem categoryItem = e.value;
+          return GestureDetector(
+            onTap: () {
+              onCategoryItemClicked(context, categoryItem);
+            },
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: CategoryItemCardWidget(
+                item: categoryItem,
+                color: gridColors[index % gridColors.length],
+              ),
             ),
-          ),
-        );
-      }).toList(),
-
-      //Here is the place that we are getting flexible/ dynamic card for various images
-      staggeredTiles: categoryItemsDemo
-          .map<StaggeredTile>((_) => StaggeredTile.fit(2))
-          .toList(),
-      mainAxisSpacing: 3.0,
-      crossAxisSpacing: 4.0, // add some space
+          );
+        }).toList(),
+        mainAxisSpacing: 3.0,
+        crossAxisSpacing: 4.0, // add some space
+      ),
     );
   }
 

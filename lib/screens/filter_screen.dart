@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/common_widgets/app_button.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
@@ -85,7 +84,7 @@ class FilterScreen extends StatelessWidget {
 class OptionItem extends StatefulWidget {
   final String text;
 
-  const OptionItem({Key key, this.text}) : super(key: key);
+  const OptionItem({Key? key, required this.text}) : super(key: key);
 
   @override
   _OptionItemState createState() => _OptionItemState();

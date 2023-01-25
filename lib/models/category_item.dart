@@ -1,9 +1,9 @@
 class CategoryItem {
-  final int id;
+  final int? id;
   final String name;
   final String imagePath;
 
-  CategoryItem({this.id, this.name, this.imagePath});
+  CategoryItem({this.id, required this.name, required this.imagePath});
 }
 
 var categoryItemsDemo = [

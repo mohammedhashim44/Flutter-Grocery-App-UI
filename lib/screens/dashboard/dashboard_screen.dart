@@ -59,7 +59,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
   BottomNavigationBarItem getNavigationBarItem(
-      {String label, String iconPath, int index}) {
+      {required String label, required String iconPath, required int index}) {
     Color iconColor =
         index == currentIndex ? AppColors.primaryColor : Colors.black;
     return BottomNavigationBarItem(

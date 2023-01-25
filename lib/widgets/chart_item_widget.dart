@@ -6,7 +6,7 @@ import 'package:grocery_app/styles/colors.dart';
 import 'item_counter_widget.dart';
 
 class ChartItemWidget extends StatefulWidget {
-  ChartItemWidget({Key key, this.item}) : super(key: key);
+  ChartItemWidget({Key? key, required this.item}) : super(key: key);
   final GroceryItem item;
 
   @override

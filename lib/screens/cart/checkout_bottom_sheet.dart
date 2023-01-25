@@ -46,7 +46,12 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
           getDivider(),
           checkoutRow("Delivery", trailingText: "Select Method"),
           getDivider(),
-          checkoutRow("Payment", trailingWidget: Icon(Icons.payment)),
+          checkoutRow(
+            "Payment",
+            trailingWidget: Icon(
+              Icons.payment,
+            ),
+          ),
           getDivider(),
           checkoutRow("Promo Code", trailingText: "Pick Discount"),
           getDivider(),
@@ -62,7 +67,7 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
             ),
             child: AppButton(
               label: "Place Order",
-              fontWeight: FontWeight.w600,
+              // fontWeight: FontWeight.w600,
               padding: EdgeInsets.symmetric(
                 vertical: 25,
               ),
@@ -90,25 +95,29 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
           style: TextStyle(
             color: Color(0xFF7C7C7C),
             fontSize: 14,
-            fontFamily: Theme.of(context).textTheme.bodyText1.fontFamily,
+            fontFamily: Theme.of(context).textTheme.bodyText1?.fontFamily,
             fontWeight: FontWeight.w600,
           ),
           children: [
             TextSpan(
-                text: " Terms",
-                style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold)),
+              text: " Terms",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
             TextSpan(text: " And"),
             TextSpan(
-                text: " Conditions",
-                style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold)),
+              text: " Conditions",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ]),
     );
   }
 
   Widget checkoutRow(String label,
-      {String trailingText, Widget trailingWidget}) {
+      {String? trailingText, Widget? trailingWidget}) {
     return Container(
       margin: EdgeInsets.symmetric(
         vertical: 15,
@@ -123,7 +132,7 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
           ),
           Spacer(),
           trailingText == null
-              ? trailingWidget
+              ? (trailingWidget ?? Container())
               : AppText(
                   text: trailingText,
                   fontSize: 16,
