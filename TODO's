@@ -1,0 +1,19 @@
+Eliminate(just comment) Review & Nutritions from product card
+Add BLANK popup window for Product Details from product card
+Eliminate Search Bar from Main Activity
+Eliminate(just comment) everything that has to do with location
+Add functionality for "See All" button from "Groceries"/"Exclusive Order"/"Best Selling" on Main Activity
+Add BLANK popup window for Campaign Card on Main Activity
+Add subtitle for Meat on Main Activity
+Move Account from lowbar to the top-right on Main Activity
+Add a CLEAN title to complete a row with "Account" section from top-right
+Change "Delivery Access" with "My Checks"(a history with all electronic checks of that account)
+In Explore Activity, at the end, add functionality: infinite RANDOM product cards(taking whole page width)(idealy random product cards of the unused cards and then a reset to every used card to as unused)
+
+
+Add functionality for Search Bar
+Whole app doesn't save changes(store locally every data, in the CLEANEST way possible)
+    -Favourite button/activity not working(after adding a product to favourite it deselects it when card loses focus=when you go back)
+Login/Register functionality
+Connect to DB and PARSE data from DB dynamically in app on login event
+Payment - Stripe
