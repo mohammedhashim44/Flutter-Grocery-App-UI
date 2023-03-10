@@ -17,3 +17,4 @@ Whole app doesn't save changes(store locally every data, in the CLEANEST way pos
 Login/Register functionality
 Connect to DB and PARSE data from DB dynamically in app on login event
 Payment - Stripe
+
